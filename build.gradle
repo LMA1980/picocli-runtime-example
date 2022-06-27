@@ -38,3 +38,15 @@ runtime {
     options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
     modules = ['java.base']
 }
+
+application {
+    mainClass = 'CliApplication'
+    applicationName = 'helloworld'
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'cli-application-helloword',
+                'Main-Class': 'CliApplication'
+    }
+}
