@@ -11,11 +11,9 @@ repositories {
     mavenCentral()
 }
 
-tasks.register('showRepositories') {
-    doLast {
-        repositories.each {
-            println "repository: ${it.name} ('${it.url}')"
-        }
+tasks.init.doLast {
+    repositories.each {
+        println "repository: ${it.name} ('${it.url}')"
     }
 }
 
@@ -37,6 +35,14 @@ compileJava {
 runtime {
     options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
     modules = ['java.base']
+
+}
+
+tasks.runtime.doFirst {
+    def currentOs = org.gradle.internal.os.OperatingSystem.current()
+    def basePath = currentOs.windows ? project.name : currentOs.linux ? "$project.name/lib" : "${project.name}.app/Contents"
+    println "Current Operating System: ${currentOs}"
+    println "${basePath}"
 }
 
 application {

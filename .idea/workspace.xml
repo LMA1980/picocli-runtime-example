@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6aeaca79-78e4-4029-bd62-c8c959df3963" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,14 +86,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/ichiskaar/repos/test-picocli-jlink/build/libs/test-picocli-jlink-1.0-SNAPSHOT.jar",
+    "last_opened_file_path": "/home/ichiskaar/repos/picocli-runtime-example",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.CliApplication-no-arguments">
+  <component name="RunManager" selected="Gradle.test-picocli-jlink [runtime]">
     <configuration name="CliApplication-help" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="CliApplication" />
       <module name="test-picocli-jlink.main" />
@@ -114,6 +118,27 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="picocli-runtime-example [compileJava]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="compileJava" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="test-picocli-jlink [runtime]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -140,11 +165,13 @@
       <item itemvalue="Application.CliApplication-no-arguments" />
       <item itemvalue="Application.CliApplication-version" />
       <item itemvalue="Application.CliApplication-help" />
+      <item itemvalue="Gradle.picocli-runtime-example [compileJava]" />
       <item itemvalue="Gradle.test-picocli-jlink [runtime]" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.test-picocli-jlink [runtime]" />
+        <item itemvalue="Gradle.picocli-runtime-example [compileJava]" />
       </list>
     </recent_temporary>
   </component>
