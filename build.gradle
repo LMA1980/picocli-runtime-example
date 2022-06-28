@@ -1,14 +1,20 @@
 plugins {
-    id 'java'
-    id 'application'
     id 'org.beryx.runtime' version '1.12.7'
 }
 
 group 'info.lma1980'
 version '1.0-SNAPSHOT'
 
+tasks.jar.enabled = true
+
 repositories {
     mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(18))
+    }
 }
 
 tasks.init.doLast {
@@ -29,20 +35,12 @@ test {
 }
 
 compileJava {
+    options.encoding = 'UTF-8'
     options.compilerArgs += ["-Aproject=${project.group}/${project.name}"]
 }
 
 runtime {
     options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
-    modules = ['java.base']
-
-}
-
-tasks.runtime.doFirst {
-    def currentOs = org.gradle.internal.os.OperatingSystem.current()
-    def basePath = currentOs.windows ? project.name : currentOs.linux ? "$project.name/lib" : "${project.name}.app/Contents"
-    println "Current Operating System: ${currentOs}"
-    println "${basePath}"
 }
 
 application {
@@ -52,7 +50,6 @@ application {
 
 jar {
     manifest {
-        attributes 'Implementation-Title': 'cli-application-helloword',
-                'Main-Class': 'CliApplication'
+        attributes 'Implementation-Title': 'cli-application-helloword', 'Main-Class': 'CliApplication'
     }
 }
